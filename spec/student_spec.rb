@@ -4,7 +4,7 @@ describe Student do
   before(:each) do
     @name = "Steve"
     @age = 12
-    @student = Student.new(@name, @age)
+    @student = Student.new({name: @name, age: @age})
   end
   it 'exists' do
     expect(@student).to be_a(Student)
