@@ -10,11 +10,11 @@ class Course
   end
 
   def full?
-    @students.length > @capacity
+    @students.length >= @capacity
   end
 
   def enroll(student)
-    if student.class == Student
+    if student.class == Student && !@students.include?(student)
       @students << student
     end
   end

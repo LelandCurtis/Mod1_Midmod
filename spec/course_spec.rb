@@ -27,11 +27,11 @@ describe Course do
       @course.enroll(@student1)
       expect(@course.full?).to eq(false)
     end
-    it 'returns false if enrolled students are equal to capacity' do
+    it 'returns true if enrolled students are equal to capacity' do
       expect(@course.full?).to eq(false)
       @course.enroll(@student1)
       @course.enroll(@student2)
-      expect(@course.full?).to eq(false)
+      expect(@course.full?).to eq(true)
 
     end
     it 'returns true if enrolled students are greater than capacity' do
